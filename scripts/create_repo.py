@@ -4,17 +4,18 @@ It requires a personal access token with the necessary permissions.
 """
 
 import requests
-import json
-from dotenv import dotenv_values
+import json # json will be installed along with the python
+from dotenv import dotenv_values # search in google as "pypi" --> PyPI · The Python Package Index --> In search, type as "python-dotenv" --> click on python-dotenv --> here we have example how to use "python-dotenv" 
 
-config = dotenv_values(r".env")
+config = dotenv_values(r".env") # it is in same folder of script, so we given the (.env)
 
 # Configuration
-github_token = config['github_token']
-user_name = 'learninguser'
-repo_name = 'terraform-python-ec2'
+github_token = config['github_token'] # this command get the github_token from the .env
+user_name = 'poojarivinod' #github username
+repo_name = 'terraform-python-ec2-1' # repo name we want to create
 description = 'This repo is to discuss about python usecases'
 
+# search in google as "github api" --> GitHub REST API documentation
 # GitHub API URL for creating a repository within an organization
 url = f'https://api.github.com/user/repos'
 

@@ -11,7 +11,7 @@ print(config)
 
 # Configuration
 github_token = config['github_token']
-user_name = 'learninguser'
+user_name = 'poojarivinod'
 HEADERS = {'Authorization': f'token {github_token}'} # {'Authorization': 'token ' + github_token}
 
 def list_repos(user_name):
@@ -21,7 +21,7 @@ def list_repos(user_name):
     repos = []
     url = f'https://api.github.com/users/{user_name}/repos'
     while url:
-        response = requests.get(url, headers=HEADERS, params={'per_page': 100})
+        response = requests.get(url, headers=HEADERS, params={'per_page': 100}) # In one page prints 100 repository
         if response.status_code == 200:
             repos.extend(response.json())
             # Check if there is a next page in the pagination

@@ -1,2 +1,3 @@
+# package required details for python are kept in the requirement.txt
 requests
 python-dotenv
